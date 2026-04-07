@@ -318,3 +318,52 @@ footer {
     transform: scale(1.02);
     filter: brightness(1.2); /* Dá um brilho extra no hover */
 }
+
+/* Estilo do Formulário */
+.formulario-geek {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    text-align: left;
+}
+
+.campo-grupo {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.campo-grupo label {
+    font-family: 'Orbitron', sans-serif;
+    color: #5b21b6;
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+
+.campo-grupo input, 
+.campo-grupo select, 
+.campo-grupo textarea {
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid rgba(125, 60, 255, 0.3);
+    background: rgba(255, 255, 255, 0.8);
+    font-family: Arial, sans-serif;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.campo-grupo input:focus, 
+.campo-grupo select:focus, 
+.campo-grupo textarea:focus {
+    border-color: #7d3cff;
+    box-shadow: 0 0 10px rgba(125, 60, 255, 0.3);
+    background: #fff;
+}
+
+.botao-enviar {
+    margin-top: 10px;
+    width: 100%;
+    font-family: 'Orbitron', sans-serif;
+    font-weight: bold;
+    letter-spacing: 1px;
+}

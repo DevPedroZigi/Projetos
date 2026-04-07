@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encomenda Personalizada - Sky Geek Store</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="nuvens">
+            <img class="nuvem n1" src="images/nuvem-pixelada-sem-fundo.png" alt="Nuvem">
+            <img class="nuvem n2" src="images/nuvem-pixelada-sem-fundo.png" alt="Nuvem">
+        </div>
+        <h1><a href="index.html" class="logo-link">Sky Geek Store</a></h1>
+        <p>Faça seu pedido personalizado e exclusivo.</p>
+        
+        <nav class="botoes-navegacao">
+            <a href="index.html" class="botao botao-azul">Voltar para Loja</a>
+        </nav>
+    </header>
+
+    <main class="conteudo-principal">
+        <section class="conteudo-sobre">
+            <h2>Formulário de Encomenda</h2>
+            <form id="form-encomenda" class="formulario-geek">
+                
+                <div class="campo-grupo">
+                    <label for="personagem">Qual personagem você deseja?</label>
+                    <input type="text" id="personagem" name="personagem" placeholder="Ex: Tanjiro Kamado" required>
+                </div>
+
+                <div class="campo-grupo">
+                    <label for="tipo">Tipo de Boneco:</label>
+                    <select id="tipo" name="tipo">
+                        <option value="action-figure">Action Figure Articulado</option>
+                        <option value="estatua">Estátua (Fixo)</option>
+                        <option value="chibi">Chibi / Miniatura</option>
+                        <option value="funko">Estilo Funko</option>
+                    </select>
+                </div>
+
+                <div class="campo-grupo">
+                    <label for="tamanho">Tamanho Aproximado:</label>
+                    <select id="tamanho" name="tamanho">
+                        <option value="10cm">10cm (Pequeno)</option>
+                        <option value="18cm">18cm (Padrão)</option>
+                        <option value="30cm">30cm (Grande)</option>
+                        <option value="escala">Escala Real 1/1 (Premium)</option>
+                    </select>
+                </div>
+
+                <div class="campo-grupo">
+                    <label for="detalhes">Detalhes Adicionais:</label>
+                    <textarea id="detalhes" name="detalhes" rows="4" placeholder="Descreva a pose, base, ou acessórios que você imagina..."></textarea>
+                </div>
+
+                <button type="submit" class="botao-enviar">Enviar Pedido para Orçamento</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>Sky Geek Store - Transformando sonhos em Action Figures.</p>
+    </footer>
+</body>
+</html>
