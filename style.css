@@ -243,3 +243,78 @@ footer {
     font-family: 'Orbitron', sans-serif;
     margin-top: 2rem;
 }
+
+/* Container da Busca */
+.busca-container {
+    display: flex;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50px;
+    padding: 5px 15px;
+    transition: all 0.3s ease;
+    margin-left: 10px; /* Separa dos botões */
+}
+
+/* Quando clicar para digitar, brilha em roxo */
+.busca-container:focus-within {
+    border-color: #7d3cff;
+    box-shadow: 0 0 15px rgba(125, 60, 255, 0.5);
+    background: rgba(255, 255, 255, 0.3);
+}
+
+/* Campo de Texto */
+.campo-busca {
+    background: transparent;
+    border: none;
+    outline: none;
+    color: white;
+    font-family: Arial, sans-serif;
+    padding: 10px;
+    width: 180px; /* Largura da barra */
+    transition: width 0.4s ease;
+}
+
+/* Efeito de expandir ao clicar */
+.campo-busca:focus {
+    width: 250px;
+}
+
+/* Estilização do texto dentro do campo (placeholder) */
+.campo-busca::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+/* Botão da Lupa */
+.botao-lupa {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 1.2rem;
+    padding: 0;
+    margin-left: 5px;
+    transition: transform 0.2s ease;
+    /* Resetando estilos de botões anteriores */
+    border-radius: 0;
+    box-shadow: none;
+}
+
+.botao-lupa:hover {
+    transform: scale(1.2);
+    background: transparent; /* Garante que não pegue a cor roxa dos outros botões */
+}
+
+/* Remove a formatação padrão de link do título */
+.logo-link {
+    text-decoration: none; /* Remove o sublinhado */
+    color: inherit;       /* Faz o link herdar a cor #DDA0DD definida no h1 */
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+/* Efeito opcional: a logo aumenta levemente quando você passa o mouse */
+.logo-link:hover {
+    transform: scale(1.02);
+    filter: brightness(1.2); /* Dá um brilho extra no hover */
+}
