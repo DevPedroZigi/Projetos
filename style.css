@@ -464,3 +464,13 @@ footer {
     box-shadow: 0 0 15px rgba(125, 60, 255, 0.4); /* Efeito neon suave */
 }
 
+/* Exemplo de Botão de Promoção com cores de 'Alerta/Fogo' */
+.botao-promo {
+    background: linear-gradient(135deg, #ff4b2b 0%, #ff416c 100%);
+    box-shadow: 0 0 20px rgba(255, 75, 43, 0.6);
+}
+
+.botao-promo:hover {
+    box-shadow: 0 0 30px rgba(255, 65, 108, 0.8);
+    transform: scale(1.1) rotate(-2deg); /* Um leve giro para dar destaque */
+}
