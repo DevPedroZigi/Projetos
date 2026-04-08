@@ -387,24 +387,48 @@ footer {
 }
 
 .input-arquivo::file-selector-button {
-    background: #7d3cff;
+    background: #7d3cff; /* Roxo principal */
     color: white;
-    padding: 10px 20px;
+    padding: 10px 25px; /* Aumentei o padding */
     border: none;
     border-radius: 20px;
-    cursor: pointer;
+    
     font-family: 'Orbitron', sans-serif;
-    font-size: 0.8rem;
-    margin-right: 10px; /* Espaço entre o botão e o texto */
-    transition: 0.3s;
-    flex-shrink: 0;  /* Impede que o botão seja espremido */
+    font-size: 0.9rem;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    
+    /* Impede que o botão seja espremido */
+    flex-shrink: 0;
+    
+    /* Garante que o hover funcione */
+    cursor: pointer;
+    pointer-events: auto; /* Certifica-se de que ele recebe cliques */
+    
+    transition: all 0.3s ease; /* Transição suave para o hover */
+    
+    /* Corrige o alinhamento central */
+    margin: 0; /* Remove margens padrão */
 }
 
 .input-arquivo {
-    width: 80%; /* Garante que ele ocupe todo o espaço disponível */
-    min-height: 40px; /* Dá uma altura mínima confortável */
+    .input-arquivo {
+    width: 100%;
+    min-height: 100%;
     cursor: pointer;
-    font-size: 0.9rem; /* Diminui levemente a fonte do texto "Nenhum arquivo..." */
+    
+    /* Posiciona o texto do sistema "Nenhum arquivo..." à direita */
+    display: flex;
+    align-items: center;
+    gap: 15px; /* Espaço entre o botão e o texto */
+    
+    /* Esconde a renderização padrão de botão do navegador, mas mantém o comportamento clicável */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border: none;
+    background: transparent;
+}
 }
 
 .aviso-formato {
@@ -412,3 +436,31 @@ footer {
     color: #666;
     margin-top: 10px;
 }
+
+.input-wrapper {
+    background: rgba(125, 60, 255, 0.05); 
+    border: 1px solid rgba(125, 60, 255, 0.3);
+    border-radius: 12px;
+    padding: 20px;
+    
+    /* Mágica da Centralização */
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center;    /* Centraliza verticalmente */
+    
+    /* Previne que o container esmague o botão */
+    min-height: 80px; 
+    width: 100%;
+    
+    cursor: pointer; /* Faz todo o box parecer clicável */
+    
+    /* Garante que o hover do box não atrapalhe */
+    transition: background 0.3s ease;
+}
+
+.input-arquivo:hover::file-selector-button {
+    background: #6732cc; /* Roxo mais escuro no hover */
+    transform: scale(1.05); /* Pequeno aumento */
+    box-shadow: 0 0 15px rgba(125, 60, 255, 0.4); /* Efeito neon suave */
+}
+
